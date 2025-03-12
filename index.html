@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha do Tempo da Computação Distribuída</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .timeline-container {
+            width: 100%;
+            max-width: 1200px;
+            overflow-x: auto;
+            padding: 40px;
+        }
+
+        .timeline {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #007bff;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .event {
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            margin: 0 30px;
+            width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1;
+        }
+
+        .event .year {
+            font-weight: bold;
+            color: #007bff;
+            font-size: 1.5em;
+        }
+
+        .event h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .event p {
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .event:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+            transform: translateX(-50%);
+        }
+
+        .event:nth-child(odd):before {
+            border-bottom-color: #007bff;
+        }
+
+        .event:nth-child(even):before {
+            border-bottom-color: #28a745;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Linha do Tempo da Computação Distribuída</h1>
+
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="event">
+                <div class="year">1960s</div>
+                <h3>Conceitos Iniciais de Computação Distribuída</h3>
+                <p>Teoria da computação distribuída começa a ser desenvolvida.</p>
+            </div>
+
+            <div class="event">
+                <div class="year">1970s</div>
+                <h3>Redes e Primeiros Sistemas Distribuídos</h3>
+                <p>Primeiros experimentos com ARPANET e sistemas distribuídos.</p>
+            </div>
+
+            <div class="event">
+                <div class="year">1980s</div>
+                <h3>Crescimento das Redes de Computadores</h3>
+                <p>Surgem as LANs e sistemas de arquivos distribuídos como NFS.</p>
+            </div>
+
+            <div class="event">
+                <div class="year">1990s</div>
+                <h3>A Explosão da Internet</h3>
+                <p>A Internet se expande e a Web 1.0 é formada.</p>
+            </div>
+
+            <div class="event">
+                <div class="year">2000s</div>
+                <h3>Computação em Nuvem e Big Data</h3>
+                <p>Surgem as primeiras plataformas de computação em nuvem e ferramentas para Big Data.</p>
+            </div>
+
+            <div class="event">
+                <div class="year">2010s</div>
+                <h3>Microservices e Contêineres</h3>
+                <p>Docker e Kubernetes transformam a maneira como aplicamos computação distribuída.</p>
+            </div>
+
+            <div class="event">
+                <div class="year">2020s</div>
+                <h3>Edge Computing e IA Distribuída</h3>
+                <p>Computação descentralizada e o uso de Inteligência Artificial em sistemas distribuídos.</p>
+            </div>
+        </div>
+    </div>
+
+    <p>Uma coleção de banco de dispositivos independentes que aparenta pro usuario ser um sistema único e coerente</p>
+
+</body>
+</html>
